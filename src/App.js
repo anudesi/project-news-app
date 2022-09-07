@@ -17,9 +17,7 @@ function App() {
       <div className='heading'>
       <h1>News Now</h1>
       </div>
-      <h1 class="text-3xl font-bold underline text-orange-600">
-    Hello world!
-    </h1>
+   
     <Navbar/>
     <Routes>
     <Route path="home"element={<Home/>}> </Route> 
