@@ -1,19 +1,22 @@
 import React, { useContext } from 'react'
 import { MyContext } from "../ContextApi/Context";
+import { NavLink } from 'react-router-dom'; 
+
 
 export default function Business() {
   const { data } = useContext(MyContext);
-  const sources = data.sources? data.sources: [] 
+  
   return (
-    <div>
-    {sources.map((news,index) => {
+    <div  className="mainPages-container">
+    {data?.business?.map((news,index) => {
       return (
-        <div key={index} className='news-div'>
-       <h2>Language : {news.language}</h2>
-       <h5>Country of origin: {news.country}</h5>
-       <h4>{news.description}</h4>
-       <h5>{news.name}</h5>
-       <a href={news.url}>Visit to read </a>
+        <div key={index} className="mainPages-card">     
+       
+       <NavLink to={`/business/${news.name}`}> <img src="https://picsum.photos/300/200" alt="pic" /> </NavLink>     
+       <h4>{news.description}<br />
+       <NavLink to={`/business/${news.name}`}><span><b>more ...</b></span> </NavLink> 
+       </h4>
+      
        </div>
       );
     })}

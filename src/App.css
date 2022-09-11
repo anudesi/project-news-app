@@ -1,63 +1,191 @@
-*{
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
 }
 
-/*  .main-container{
-    width:80%;
-    border: 1px solid black;
-    margin: 0 auto;
-    margin-top: 2%;
-} */ 
-.navbar-container{
-    width:80%;
-    margin: 0 auto;
-    margin-top: 2%;
-    padding: 10px;   
-    border-bottom: 1px solid red;
-    letter-spacing: 1px;
+.news-logo{
+    height: 1em;
+    color:red;
+    font-size: 7em;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: .75em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
-.navbar-container ul li{
-    display:inline-block;
-    padding-right: 20px;
+
+/* navbar css */
+.navbar-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: .5em;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-container ul li {
+  display: inline-block;
+  padding-right: 1.5em;
+}
+li {
+  list-style: none;
+  font-weight: bolder;
+  color:red;
+  font-size: 1.25em;
 }
 
-.headlines-container{
-    width:80%;
-    margin:0 auto;  
-    display:flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
+li:hover{
+    color: purple;
+    font-size: 1.6em;
 }
-.headlines-container h1{
-    margin-top: 2%;
+.date-display{
+    width:14em;
+    text-align:right;
+    color:red;
+    font-size:1.25em;
+    font-weight:bold;
 }
-li{
-    list-style: none;
+.weather-container {
+    width: 12.5em;
+    display: inline-flex;
+    justify-content: space-around;
+    font-size: 1.25em;
+    font-weight: bolder;
+    color:red;
+  }
+
+
+/* breaking news css */
+
+h5,
+h4,
+h2 {
+  font-weight: 300;
 }
-.news-div{
-    width:40%;
-    height: 150px;   
-    margin:0 auto;
-    margin-top: 20px;
-    padding: 15px;  
-   border-radius: 5px;
-   box-shadow: 3px 3px 3px aliceblue;  
-   
+
+/* main page card css common for the home/sports/science/business/entertainment */
+
+.mainPages-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
 }
-h5,h4,h2{
-    font-weight: 300;
+
+.mainPages-card {
+  width: 33%;
+  margin: 0 auto;
+  border: 0.1em solid gray;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 3px 3px 2px lightgray;
+  text-align: justify;
+  padding-right: .5em;
 }
-.heading{
-    width: 80%;
-    margin:0 auto;
-    font-size: 4rem;
-    text-transform: uppercase;
-   font-weight: 100;
-   text-align: center;
-   letter-spacing: 6rem;
-   border-bottom: 1px solid red;
+.mainPages-card img {
+  width: 20em;
+  height: 10em; 
+  object-fit: cover; 
+  padding-right: .5em;
 }
+
+
+
+
+/* breaking news text scroll */
+.breakingNews-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 8em;
+  background-color: red;
+  border: 2px solid red;
+  margin-bottom: 2em;
+}
+.breakingNews-text {
+    font-size: 1.5em;
+    font-weight: bolder;
+    background-color: red;
+    color: white;
+    text-align: center;
+    animation: blinker 3s linear infinite;
+  }
+  
+.breakingNews-msg {
+  width: 100%;
+  color: white;
+  animation: slide-left 75s linear infinite;
+  font-size: 3.5rem;
+  white-space: nowrap;
+}
+span {
+  color: blue;
+}
+.breakingNews-msg:hover {
+  animation-play-state: paused;
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-1000%);
+  }
+}
+
+@keyframes blinker {
+  0% {
+    color: red;
+  }
+  20% {
+    color: #f5e906;
+  }
+  40% {
+    color: orange;
+  }
+  60% {
+    color: yellow;
+  }
+  100% {
+    color: gold;
+  }
+}
+
+
+/* sub/single card container single news details */
+.subCardContainer {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid red;
+  padding: .5em;
+  display: flex;
+}
+.subCardImg {
+  width: 50%;
+  padding: 1.5em;
+}
+.subCardText {
+  width: 50%;
+}
+
+.subCardText p {
+  padding: 1.5em;
+  text-align: justify;
+}
+.subCardText h1 {
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+  }
+  
+
+/* media query */  
+
+
+
+
