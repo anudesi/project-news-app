@@ -16,7 +16,7 @@ export default function NewsCard() {
 
    return (
     <div className="subCardContainer">     
-    <div className="subCardImg"> {article?.urlToImage ? <img src={article?.urlToImage} alt="pic"/>: <img src="https://picsum.photos/600/500" alt="pic"/> }</div>  
+    <div className="subCardImg"> {article?.urlToImage ? <img src={article?.urlToImage} alt="pic"/>: <img src="https://picsum.photos/400/300" alt="pic"/> }</div>  
      <div className="subCardText">     
       <h1>{article?.title ? article?.title : article?.name}<br /></h1> 
       <p style={{letterSpacing:"1px"}}>{article?.content ? article?.content+  content : article?.description + content}</p>

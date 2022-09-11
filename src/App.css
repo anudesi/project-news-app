@@ -11,17 +11,19 @@
 .news-logo{
     width: 80%;
     margin: 0 auto;
-   height: 1em;  
+   height: 100px;  
    color:red;
+   
   font-size: 7em;
   font-weight: bolder;
-  letter-spacing: .75em;
+ letter-spacing: .5em;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
  }
 
 /* navbar css */
 .navbar-container {
+ 
   width: 80%;
   margin: 0 auto;
   margin-top: 2%;
@@ -92,13 +94,13 @@ h2 {
   border-radius: 10px;
   box-shadow: 3px 3px 2px lightgray;
   text-align: justify;
-  padding-right: .5em;
+  padding-right: 10px;
 }
 .mainPages-card img {
-  width: 20em;
-  height: 10em; 
+  width: 200px;
+  height: 150px; 
   object-fit: cover; 
-  padding-right: .5em;
+  padding-right: 10px;
 }
 
 
@@ -170,11 +172,19 @@ span {
   border-bottom: 1px solid red;
   padding: .5em;
   display: flex;
+  justify-content: space-between;
+  
 }
 .subCardImg {
   width: 50%;
   padding: 1.5em;
+  
 }
+.subCardImg img {
+  width: 100%;
+   
+}
+
 .subCardText {
   width: 50%;
 }
@@ -191,22 +201,20 @@ span {
   
 
 /* media query  upto 768*/  
-@media only screen and (max-width: 768px){
+ @media only screen and (min-width: 400px) and (max-width: 768px){
     .main-container{
         width:100%;
-    }   
-    
+    }    
     .news-logo{
       width: 80%;
       margin: 0 auto;
     color: red;     
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bolder;
     letter-spacing: 0;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
    }
-
 
     .navbar-container{
         width:100%;
@@ -222,11 +230,13 @@ span {
       width: 90%; 
       gap: 1.5em;
       margin: 0 auto;
+      display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
     }
     .mainPages-card {
-      width: 90%;
-      border: 0.1em solid gray;
-     display: block;
+      width: 90%;     
+      border: 0.1em solid gray;     
       border-radius: 10px;
       box-shadow: 3px 3px 2px lightgray;
       text-align: justify;     
@@ -247,6 +257,7 @@ span {
     .subCardImg {
       width: 100%;
       padding: 1.5em;
+      object-fit: cover;  
     }
     .subCardText {
       width: 100%;
@@ -257,9 +268,9 @@ span {
       text-align: justify;
     }
 }
-
+ 
 /* for upto 1200px*/
-@media only screen and (min-width: 768px) and (max-width: 1200px){
+ @media only screen and (min-width: 768px) and (max-width: 1200px){
 
   .main-container{
     width:100%;
@@ -279,11 +290,60 @@ span {
 .newsLinks li{
     display:inline-block;
     font-size: 1.3em;
-}    
+} 
+.newsLinks{
+  margin-bottom: 10px;
+}
+
+.mainPages-container {
+  width: 90%; 
+  gap: 1.5em;
+  margin: 0 auto;
+  display: flex;
+flex-wrap: wrap;
+gap: 1.5em;
+}
+.mainPages-card {
+  width: 90%;     
+  border: 0.1em solid gray;     
+  border-radius: 10px;
+  box-shadow: 3px 3px 2px lightgray;
+  text-align: justify;     
+}
+
+.mainPages-card img {
+  width: 100%;  
+  margin: 0 auto;    
+  object-fit: cover;     
+}
+
+.subCardContainer {
+  width: 100%;    
+  border-bottom: 1px solid red;
+  padding: .5em;
+ display: block;
+ margin: 0 auto;
+}
+.subCardImg {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5em;
+  object-fit: cover;  
+}
+.subCardText {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.subCardText p {
+  padding: 1.5em;
+  text-align: justify;
+}
+
 } 
 
-
-/* upto 1850px*/
+ 
+/* upto px*/
 @media only screen and (min-width: 1200px) and (max-width: 1490px){
 
   .main-container{
@@ -311,47 +371,31 @@ span {
   font-size: 1.3em;
 }
 
-} 
 
-@media only screen and (min-width: 1490px){
-
-  .main-container{
-    width:100%;
-    margin: 0 auto;
-}
-.news-logo{
-    width: 80%;
-    margin: 0 auto;
-   height: 1em;  
-   color:red;
-  font-size: 6em;
-  font-weight: bolder;
-  letter-spacing: .5em;
-  text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
- }
-
-/* navbar css */
-.navbar-container {
+.subCardContainer {
   width: 80%;
   margin: 0 auto;
-  margin-top: 2%;
-  padding: .5em;
-  border-top: 1px solid red;
   border-bottom: 1px solid red;
-  letter-spacing: 1px;
+  padding: .5em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.newsLinks li {
-  display: inline-block;
-  padding-right: 1.5em;
+.subCardImg {
+  width: 50%;
+  
 }
-li {
-  list-style: none;
-  font-weight: bolder;
-  color:red;
-  font-size: 1.25em;
+.subCardText {
+  width: 50%;
 }
-} 
+
+.subCardText p {
+  padding: 1.5em;
+  text-align: justify;
+}
+.subCardText h1 {
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+  }
+}
 

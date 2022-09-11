@@ -11,7 +11,7 @@ export default function Navbar() {
     
     <div className="navbar-container">
         <div className="newsLinks">
-          <ul className="newsUl">
+            <ul className="newsUl">
           <li ><NavLink to="/" style={({ isActive }) =>
               isActive ? activeStyle : undefined}>Home</NavLink></li> 
           <li><NavLink to="/sports" style={({ isActive }) =>
@@ -22,11 +22,11 @@ export default function Navbar() {
               isActive ? activeStyle : undefined}>Science</NavLink></li>
           <li><NavLink to="/entertainment" style={({ isActive }) =>
               isActive ? activeStyle : undefined}>Entertainment</NavLink></li>         
-        </ul>
+            </ul>
         </div>
         <DateDisplay/> 
         <div className="weather-container">
-        <p>{weather.city}  {weather.temp}°C</p>  
+            <p>{weather.city}  {weather.temp}°C</p>  
         </div> 
 
   </div>

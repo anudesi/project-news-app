@@ -1,6 +1,6 @@
 import React from'react'
 import './App.css';
-import "./index.css" 
+
 import {Routes,Route} from "react-router-dom";
 import Navbar from './components/Navbar';
 import Sports from "./components/Sports"
@@ -17,8 +17,7 @@ function App() {
     <Container>
     <div className='main-container'>
       <div className='news-logo'>   
-      <h1>News Now</h1>
-      
+      <p>News Now</p>      
       </div>
      
     <Navbar/>
