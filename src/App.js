@@ -1,5 +1,6 @@
 import React from'react'
 import './App.css';
+import "./index.css" 
 import {Routes,Route} from "react-router-dom";
 import Navbar from './components/Navbar';
 import Sports from "./components/Sports"
@@ -9,26 +10,29 @@ import Container from './ContextApi/Container';
 import Entertainment from './components/Entertainment';
 import Home from './components/Home';
 import NewsCard from './components/NewsCard';
+import BreakingNews from './components/BreakingNews';
 
 function App() {
   return (
     <Container>
     <div className='main-container'>
-      <div className='heading'>
+      <div className='news-logo'>   
       <h1>News Now</h1>
+      
       </div>
-   
-    <Navbar/>
-    <Routes>
-    <Route path="home"element={<Home/>}> </Route> 
-      <Route path="home/:newstitle"element={<NewsCard/>}/>
      
-    
+    <Navbar/>
+   <BreakingNews/>
+   
+     <Routes>
+      <Route path="/" element={<Home/>}/>  
+      <Route path="/:category/:newstitle"element={<NewsCard/>}/>
       <Route path="/sports"element={<Sports/>}/>
       <Route path="/business"element={<Business/>}/>
       <Route path="/science"element={<Science/>}/>
       <Route path="/entertainment"element={<Entertainment/>}/>
-    </Routes>
+    </Routes> 
+    
   
     </div>
     </Container>
