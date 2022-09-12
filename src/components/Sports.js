@@ -13,8 +13,7 @@ export default function Sports() {
         return (
           <div key={index} className="mainPages-card">
             <NavLink to={`/sports/${news.name}`}><img src="https://picsum.photos/300/200" alt="pic"/>
-            </NavLink>
-             {/*  <h4>{news.name}</h4> */}
+            </NavLink>          
 
             <h4>{news.description.slice(0,80)} <br />
             <NavLink to={`/sports/${news.name}`}><span><b>more ...</b></span></NavLink>
