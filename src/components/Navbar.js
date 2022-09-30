@@ -6,7 +6,7 @@ import { MyContext } from '../ContextApi/Context'
 
 export default function Navbar() {
   const{weather}=useContext(MyContext)
-  let activeStyle ={backgroundColor:"red",color:"white"}
+  let activeStyle ={borderBottom:"3px solid red",fontWeight:"bold"}
   return (
     
     <div className="navbar-container">

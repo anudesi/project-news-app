@@ -2,34 +2,30 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
- 
 }
-.main-container{
-    width:80%;
-    margin: 0 auto;
+.main-container {
+  width: 80%;
+  margin: 0 auto;
 }
-.news-logo{
-    width: 80%;
-    margin: 0 auto;
-   height: 100px;  
-   color:red;
-   
+.news-logo {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: red;
   font-size: 7em;
   font-weight: bolder;
- letter-spacing: .5em;
+  letter-spacing: 0.5em;
   text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
- }
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 3px solid red;
+}
 
 /* navbar css */
 .navbar-container {
- 
   width: 80%;
   margin: 0 auto;
   margin-top: 2%;
-  padding: .5em;
-  border-top: 1px solid red;
-  border-bottom: 1px solid red;
+  padding: 0.5em;
   letter-spacing: 1px;
   display: flex;
   justify-content: space-between;
@@ -40,33 +36,32 @@
 }
 li {
   list-style: none;
-  font-weight: bolder;
-  color:red;
+  font-weight: normal;
   font-size: 1.25em;
+  padding: 5px;
 }
-
-li:hover{
-    color: purple;
-    font-size: 1.6em;
+a {
+  text-decoration: none;
 }
-.date-display{
-    width:14em;
-    color:red;
-    font-size:1.25em;
-    font-weight:bold;
-    
-    display: inline-flex;
-    justify-content: space-around;
+a:hover {
+  font-size: 1.3em;
+}
+.date-display {
+  width: 14em;
+  color: red;
+  font-size: 1.25em;
+  font-weight: bold;
+  display: inline-flex;
+  justify-content: space-around;
 }
 .weather-container {
-    width: 12.5em;
-    display: inline-flex;
-    justify-content: space-around;
-    font-size: 1.25em;
-    font-weight: bolder;
-    color:red;
-  }
-
+  width: 12.5em;
+  display: inline-flex;
+  justify-content: space-around;
+  font-size: 1.25em;
+  font-weight: bolder;
+  color: red;
+}
 
 /* breaking news css */
 
@@ -98,13 +93,10 @@ h2 {
 }
 .mainPages-card img {
   width: 200px;
-  height: 150px; 
-  object-fit: cover; 
+  height: 150px;
+  object-fit: cover;
   padding-right: 10px;
 }
-
-
-
 
 /* breaking news text scroll */
 .breakingNews-container {
@@ -116,14 +108,14 @@ h2 {
   margin-bottom: 2em;
 }
 .breakingNews-text {
-    font-size: 1.5em;
-    font-weight: bolder;
-    background-color: red;
-    color: white;
-    text-align: center;
-    animation: blinker 3s linear infinite;
-  }
-  
+  font-size: 1.5em;
+  font-weight: bolder;
+  background-color: red;
+  color: white;
+  text-align: center;
+  animation: blinker 3s linear infinite;
+}
+
 .breakingNews-msg {
   width: 100%;
   color: white;
@@ -164,25 +156,21 @@ span {
   }
 }
 
-
 /* sub/single card container single news details */
 .subCardContainer {
   width: 80%;
   margin: 0 auto;
   border-bottom: 1px solid red;
-  padding: .5em;
+  padding: 0.5em;
   display: flex;
   justify-content: space-between;
-  
 }
 .subCardImg {
   width: 50%;
   padding: 1.5em;
-  
 }
 .subCardImg img {
   width: 100%;
-   
 }
 
 .subCardText {
@@ -194,208 +182,259 @@ span {
   text-align: justify;
 }
 .subCardText h1 {
-    color: red;
+  color: red;
+  font-weight: bolder;
+  text-align: center;
+}
+
+
+/* media queries upto 400px */
+@media only screen and (max-width: 400px) {
+  .news-logo {
+    font-size: 2rem;
     font-weight: bolder;
+    letter-spacing: 0;
     text-align: center;
   }
-  
+  .navbar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .newsLinks ul li {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .weather-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .date-display {
+    width: 80%;
+    margin: 0 auto;
+  }
 
-/* media query  upto 768*/  
- @media only screen and (min-width: 400px) and (max-width: 768px){
-    .main-container{
-        width:100%;
-    }    
-    .news-logo{
-      width: 80%;
-      margin: 0 auto;
-    color: red;     
+  .mainPages-card {
+    width: 100%;
+    text-size-adjust: 0;
+    text-align: left;
+    display: block;
+    padding: 10px;
+  }
+
+  .mainPages-card img {
+    width: 100%;
+    padding: 10px;
+  }
+   .subCardContainer {
+    width: 100%;
+    border-bottom: 1px solid red;
+    padding: 0.5em;
+    display: block;
+  } 
+  .subCardImg {
+    width: 100%;
+   
+  }
+  .subCardText {
+    width: 100%;
+  }
+  .subCardText h1{
+    font-size: 1.6rem;
+  }
+
+}
+/* media query  upto 768*/
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .main-container {
+    width: 100%;
+  }
+  .news-logo {
+    width: 80%;
+    margin: 0 auto;
+    color: red;
     font-size: 3em;
     font-weight: bolder;
     letter-spacing: 0;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-   }
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
 
-    .navbar-container{
-        width:100%;
-        display:block;
-        text-align: center;        
-    }
-    .newsLinks ul li{
-        display: block;
-        font-size: 2em;
-    }
- 
-     .mainPages-container {
-      width: 90%; 
-      gap: 1.5em;
-      margin: 0 auto;
-      display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
-    }
-    .mainPages-card {
-      width: 90%;     
-      border: 0.1em solid gray;     
-      border-radius: 10px;
-      box-shadow: 3px 3px 2px lightgray;
-      text-align: justify;     
-    }
-
-    .mainPages-card img {
-      width: 100%;  
-      margin: 0 auto;    
-      object-fit: cover;     
-    }
- 
-    .subCardContainer {
-      width: 100%;    
-      border-bottom: 1px solid red;
-      padding: .5em;
-     display: block;
-    }
-    .subCardImg {
-      width: 100%;
-      padding: 1.5em;
-      object-fit: cover;  
-    }
-    .subCardText {
-      width: 100%;
-    }
-    
-    .subCardText p {
-      padding: 1.5em;
-      text-align: justify;
-    }
-}
- 
-/* for upto 1200px*/
- @media only screen and (min-width: 768px) and (max-width: 1200px){
-
-  .main-container{
-    width:100%;
-    height: 100px;
-}
-
-.news-logo{
-  font-size: 4em;
-  text-align: center;
-  letter-spacing: 0.3em;
-}
-.navbar-container{
-    width:100%;
+  .navbar-container {
+    width: 100%;
     display: block;
-    text-align: center; 
-}
-.newsLinks li{
-    display:inline-block;
-    font-size: 1.3em;
-} 
-.newsLinks{
-  margin-bottom: 10px;
+    text-align: center;
+  }
+  .newsLinks ul li {
+    display: block;
+    font-size: 2em;
+  }
+
+  .mainPages-container {
+    width: 90%;
+    gap: 1.5em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+  }
+  .mainPages-card {
+    width: 90%;
+    border: 0.1em solid gray;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px lightgray;
+    text-align: justify;
+  }
+
+  .mainPages-card img {
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .subCardContainer {
+    width: 100%;
+    border-bottom: 1px solid red;
+    padding: 0.5em;
+    display: block;
+  }
+  .subCardImg {
+    width: 100%;
+    padding: 1.5em;
+    object-fit: cover;
+  }
+  .subCardText {
+    width: 100%;
+  }
+
+  .subCardText p {
+    padding: 1.5em;
+    text-align: justify;
+  }
+
 }
 
-.mainPages-container {
-  width: 90%; 
-  gap: 1.5em;
-  margin: 0 auto;
-  display: flex;
-flex-wrap: wrap;
-gap: 1.5em;
-}
-.mainPages-card {
-  width: 90%;     
-  border: 0.1em solid gray;     
-  border-radius: 10px;
-  box-shadow: 3px 3px 2px lightgray;
-  text-align: justify;     
-}
-
-.mainPages-card img {
-  width: 100%;  
-  margin: 0 auto;    
-  object-fit: cover;     
-}
-
-.subCardContainer {
-  width: 100%;    
-  border-bottom: 1px solid red;
-  padding: .5em;
- display: block;
- margin: 0 auto;
-}
-.subCardImg {
-  width: 90%;
-  margin: 0 auto;
-  padding: 1.5em;
-  object-fit: cover;  
-}
-.subCardText {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.subCardText p {
-  padding: 1.5em;
-  text-align: justify;
-}
-
-} 
-
- 
-/* upto px*/
-@media only screen and (min-width: 1200px) and (max-width: 1490px){
-
-  .main-container{
-    width:100%;
+/* for upto 1200px*/
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main-container {
+    width: 100%;
     height: 100px;
-}
-.news-logo{
-  width: 80%;
-  margin: 0 auto;
-  color:red;
-  font-size: 6em;
-  font-weight: bolder;
-  letter-spacing: .5em;
-  text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
- }
- 
- .navbar-container{
-  width:100%;
-  display: block;
-  text-align: center; 
-}
-.newsLinks li{
-  display:inline-block;
-  font-size: 1.3em;
+  }
+
+  .news-logo {
+    font-size: 4em;
+    text-align: center;
+    letter-spacing: 0.3em;
+  }
+  .navbar-container {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .newsLinks li {
+    display: inline-block;
+    font-size: 1.3em;
+  }
+  .newsLinks {
+    margin-bottom: 10px;
+  }
+
+  .mainPages-container {
+    width: 90%;
+    gap: 1.5em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+  }
+  .mainPages-card {
+    width: 90%;
+    border: 0.1em solid gray;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px lightgray;
+    text-align: justify;
+  }
+
+  .mainPages-card img {
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .subCardContainer {
+    width: 100%;
+    border-bottom: 1px solid red;
+    padding: 0.5em;
+    display: block;
+    margin: 0 auto;
+  }
+  .subCardImg {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5em;
+    object-fit: cover;
+  }
+  .subCardText {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .subCardText p {
+    padding: 1.5em;
+    text-align: justify;
+  }
 }
 
+/* upto px*/
+@media only screen and (min-width: 1200px) and (max-width: 1490px) {
+  .main-container {
+    width: 100%;
+    height: 100px;
+  }
+  .news-logo {
+    width: 80%;
+    margin: 0 auto;
+    color: red;
+    font-size: 6em;
+    font-weight: bolder;
+    letter-spacing: 0.5em;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
 
-.subCardContainer {
-  width: 80%;
-  margin: 0 auto;
-  border-bottom: 1px solid red;
-  padding: .5em;
-  display: flex;
-  justify-content: space-around;
-}
-.subCardImg {
-  width: 50%;
-  
-}
-.subCardText {
-  width: 50%;
-}
+  .navbar-container {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .newsLinks li {
+    display: inline-block;
+    font-size: 1.3em;
+  }
 
-.subCardText p {
-  padding: 1.5em;
-  text-align: justify;
-}
-.subCardText h1 {
+  .subCardContainer {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid red;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-around;
+  }
+  .subCardImg {
+    width: 50%;
+  }
+  .subCardText {
+    width: 50%;
+  }
+
+  .subCardText p {
+    padding: 1.5em;
+    text-align: justify;
+  }
+  .subCardText h1 {
     color: red;
     font-weight: bolder;
     text-align: center;
   }
 }
-
